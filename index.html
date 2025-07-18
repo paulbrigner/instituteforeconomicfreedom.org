@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Institute for Economic Freedom</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        // Custom Tailwind theme configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#1a202c',
+                        'brand-light': '#f7fafc',
+                        'brand-blue': '#2563eb',
+                        'brand-accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Additional custom styles */
+        .card-gradient {
+            background-image: linear-gradient(to top right, #f7fafc, #edf2f7);
+        }
+        .hero-bg {
+            background-color: #1a202c;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.1), transparent 30%),
+                radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-dark/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">
+                IEF
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#initiatives" class="text-gray-300 hover:text-white transition">Initiatives</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#initiatives" class="block py-2 px-6 text-gray-300 hover:bg-gray-700">Initiatives</a>
+            <a href="#about" class="block py-2 px-6 text-gray-300 hover:bg-gray-700">About</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-300 hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Institute for Economic Freedom</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                    Advancing individual empowerment through cryptocurrency, privacy-preserving technologies, and education.
+                </p>
+                <a href="#initiatives" class="mt-8 inline-block bg-brand-blue hover:bg-brand-accent text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105">
+                    Explore Our Initiatives
+                </a>
+            </div>
+        </section>
+
+        <!-- Initiatives Section -->
+        <section id="initiatives" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Our Core Initiatives</h2>
+                    <p class="text-lg text-gray-600 mt-2">Driving change through focused projects and community building.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- PGP for Crypto Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <div class="p-8 flex-grow flex flex-col items-center text-center">
+                             <img src="pgp_profile_image.png" alt="PGP for Crypto Logo" class="h-32 w-32 mb-4 rounded-full">
+                            <h3 class="text-xl font-bold text-brand-dark mt-4">PGP* for Crypto</h3>
+                            <p class="text-gray-600 mt-2 flex-grow">Dynamic monthly gatherings bringing together industry leaders, government officials, and policy experts to discuss critical cryptocurrency policy issues.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50">
+                            <a href="https://pgpforcrypto.org" target="_blank" class="block text-center bg-brand-blue hover:bg-brand-accent text-white font-semibold py-2 px-4 rounded-lg transition">Lean More</a>
+                        </div>
+                    </div>
+                    <!-- DC Privacy Summit Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                      <div class="p-8 flex-grow flex flex-col items-center text-center bg-[#FDFBF7]">
+                          <img src="DCPS_logo.png" alt="DC Privacy Summit Logo" class="h-32 w-auto mb-4">
+                          <h3 class="text-xl font-bold text-brand-dark mt-4">DC Privacy Summit</h3>
+                          <p class="text-gray-600 mt-2 flex-grow">An annual interdisciplinary event uniting technologists, privacy advocates, and policymakers to explore privacy, innovation, and regulation.</p>
+                      </div>
+                      <div class="p-6 bg-gray-50">
+                          <a href="https://dcprivacysummit.org" target="_blank" class="block text-center bg-brand-blue hover:bg-brand-accent text-white font-semibold py-2 px-4 rounded-lg transition">Learn More</a>
+                      </div>
+                    </div>
+                    <!-- Zcash Academy Course Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <div class="p-8 flex-grow flex flex-col items-center text-center">
+                            <img src="zcash-logo.svg" alt="Zcash Academy Course Logo" class="h-32 w-32 mb-4">
+                            <h3 class="text-xl font-bold text-brand-dark mt-4">Zcash Academy</h3>
+                            <p class="text-gray-600 mt-2 flex-grow">A live, online course providing a hands-on introduction to Zcash's history, technology, tools, and governance.</p>
+                        </div>
+                         <div class="p-6 bg-gray-50">
+                            <a href="#contact" class="block text-center bg-brand-blue hover:bg-brand-accent text-white font-semibold py-2 px-4 rounded-lg transition">Express Interest</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">About The Institute</h2>
+                    <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">Dedicated to teaching sound economic principles and the technical knowledge of digital assets.</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-8 text-brand-dark border-b pb-4">Leadership</h3>
+                    
+                    <!-- Paul Brigner Bio Block -->
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 mb-12">
+                        <!-- Image Column -->
+                        <div class="flex-shrink-0 mx-auto md:mx-0">
+                            <img src="very_small_square.jpg" alt="Paul Brigner" class="w-48 h-48 rounded-full shadow-lg object-cover">
+                        </div>
+                        <!-- Bio Column -->
+                        <div class="text-center md:text-left flex-grow">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Paul Brigner, Founder &amp; Executive Director</h4>
+                            <div class="prose prose-lg max-w-none">
+                                <p>Paul Brigner is a distinguished leader in the field of technology policy and advocacy, currently serving on the board of Electric Coin Co., adjunct professor of Fintech at Georgetown University, and formerly as the Head of Coinbase Institute. Mr. Brigner is renowned within the cryptocurrency policy community for spearheading the PGP* (Pretty Good Policy) initiative, including monthly roundtable meetings, special briefings, and podcasts.</p>
+                                <br><p>With an early career spanning over a decade in software development, Mr. Brigner transitioned into policy, where he has since held high-ranking positions in notable organizations including Coinbase, Verizon, Internet Society, the Motion Picture Association of America, and the Chamber of Digital Commerce.</p>
+                                <br><p>A U.S. Army veteran with an educational background marked by a JD and MBA from Georgetown, Mr. Brigner combines technical proficiency with policy expertise, offering a rich perspective grounded in experience and academic excellence. His career is a testament to his commitment to fostering intelligent discourse and promoting advancements in the technology policy arena.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Co-Director Bio Block -->
+                    <div class="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-12">
+                        <!-- Image Column -->
+                        <div class="flex-shrink-0 mx-auto md:mx-0">
+                            <div class="w-48 h-48 rounded-full shadow-lg bg-gray-200 flex items-center justify-center">
+                                <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.375 6a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12.375 15a8.25 8.25 0 00-6.173 2.773.75.75 0 00.518 1.227h11.31a.75.75 0 00.518-1.227A8.25 8.25 0 0012.375 15z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Bio Column -->
+                        <div class="text-center md:text-left flex-grow">
+                            <h4 class="text-2xl font-semibold text-gray-800 mb-2">Co-Director (TBD)</h4>
+                            <div class="prose prose-lg max-w-none">
+                                <p class="text-gray-500 italic">Information about our esteemed Co-Director will be available soon.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Contact Us</h2>
+                    <p class="text-lg text-gray-600 mt-2">Have questions or want to get involved? Send us a message.</p>
+                </div>
+                
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-md shadow-sm focus:ring-brand-blue focus:border-brand-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-md shadow-sm focus:ring-brand-blue focus:border-brand-blue">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="mt-1 block w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-md shadow-sm focus:ring-brand-blue focus:border-brand-blue"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="submitButton" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-brand-blue hover:bg-brand-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue transition-all">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                     <!-- Message Area for Success/Error Feedback -->
+                    <div id="responseMessage" class="mt-6 text-center text-sm font-medium"></div>
+                </div>
+
+                <div class="text-center mt-12 prose prose-sm max-w-none text-gray-500">
+                    <h3>NOTICE</h3>
+                    <p>The Institute for Economic Freedom provides educational materials for informational purposes only. This content is not financial, investment, or legal advice. Visitors are encouraged to conduct independent research and consult qualified professionals before making any financial decisions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Institute for Economic Freedom · All Rights Reserved</p>
+            <p class="text-sm mt-2">Built by Paul Brigner</p>
+        </div>
+    </footer>
+
+    <script>
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const responseMessage = document.getElementById('responseMessage');
+        const submitButton = document.getElementById('submitButton');
+
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            responseMessage.textContent = '';
+            responseMessage.className = 'mt-6 text-center text-sm font-medium';
+
+            const data = {
+                name: contactForm.name.value,
+                email: contactForm.email.value,
+                message: contactForm.message.value
+            };
+
+            const lambdaUrl = 'https://xmdagtbgmnisxoieydjtdzc4h40kuwru.lambda-url.us-east-1.on.aws/';
+
+            try {
+                const response = await fetch(lambdaUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+                
+                const result = await response.json();
+
+                if (response.ok) {
+                    responseMessage.textContent = 'Message sent successfully!';
+                    responseMessage.classList.add('text-green-600');
+                    contactForm.reset();
+                } else {
+                    responseMessage.textContent = `Error: ${result.message || 'An unknown error occurred.'}`;
+                    responseMessage.classList.add('text-red-600');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                responseMessage.textContent = 'Failed to send message. Please check your connection.';
+                responseMessage.classList.add('text-red-600');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Header Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
